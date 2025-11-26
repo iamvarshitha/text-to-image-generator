@@ -206,7 +206,7 @@ More detailed safety filtering
 
 Prompt templates built into the UI
 
-<img width="200" height="200" alt="image" src="https://github.com/user-attachments/assets/ccfab160-bbca-44d8-b2ec-68e85869adec" />
+<img width="800" height="800" alt="image" src="https://github.com/user-attachments/assets/ccfab160-bbca-44d8-b2ec-68e85869adec" />
 
 
 

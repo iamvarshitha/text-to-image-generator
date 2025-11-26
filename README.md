@@ -32,9 +32,13 @@ ai-image-generator/
 Flow of the application:
 
 User enters a prompt
+
 Prompt is enriched with style + quality tags
+
 Stable Diffusion generates 1–4 images
+
 Images are watermarked and saved
+
 Results are shown in the UI, with download options
 
 
@@ -51,7 +55,7 @@ cd ai-image-generator
 pip install -r requirements.txt
 ```
 
-✔️ Step 3: (Optional) Login to Hugging Face
+✔️ Step 3: (Optional) Log in to Hugging Face
 
 If the Stable Diffusion model requires license acceptance:
 ```bash
@@ -75,7 +79,9 @@ http://localhost:8501/
 For smooth, fast image generation:
 
 NVIDIA GPU with 8GB VRAM or more
+
 CUDA 11.8 / 12.x installed
+
 Install CUDA-enabled PyTorch:
 ```bash
 pip install torch torchvision torchaudio --index-url https://download.pytorch.org/whl/cu121
@@ -84,6 +90,7 @@ pip install torch torchvision torchaudio --index-url https://download.pytorch.or
 🔹 CPU
 
 The system also functions fully on the CPU.
+
 However, image generation will be slower:
 ~20–40 seconds per image depending on settings
 
@@ -94,10 +101,15 @@ Enter a text description in the prompt box
 Select:
 
 Number of images
+
 Style (photorealistic, artistic, cartoon)
+
 Steps
+
 Guidance scale
+
 Negative prompt
+
 Seed
 
 Click Generate
@@ -107,9 +119,13 @@ Images appear on the page
 Download the PNG / JPEG files
 
 Check metadata inside the expandable section
+
 Prompt is enriched with style + quality tags
+
 Stable Diffusion generates 1–4 images
+
 Images are watermarked and saved
+
 Results are shown in the UI, with download options
 
 
@@ -117,10 +133,15 @@ Results are shown in the UI, with download options
 Technologies Used
 
 Python
+
 Streamlit
+
 PyTorch
+
 HuggingFace Diffusers
+
 Pillow
+
 Accelerate
 
 Model Used
@@ -145,6 +166,7 @@ photorealistic, digital painting, cartoon style
 ```
 
 Use context to anchor the scene
+
 Always include a negative prompt, such as:
 ```
 blurry, distorted, low quality, extra limbs, text, watermark
@@ -157,10 +179,15 @@ Steps between 40–50 usually produce high-quality images
 ⚠️ 8. Current Limitations
 
 Slower generation on the CPU
+
 Base model outputs are limited to 512×512 resolution
+
 Occasional imperfections depending on the prompt
+
 Only simple prompt filtering (word-based)
+
 Model not fine-tuned on any specific dataset
+
 Needs at least 6–8 GB RAM to run comfortably
 
 🚀 9. Future Improvements
@@ -168,10 +195,17 @@ Needs at least 6–8 GB RAM to run comfortably
 If extended further, the project can include:
 
 Fine-tuning or LoRA training for custom styles
+
 Upgrading to higher-resolution models (e.g., SDXL)
+
 A persistent gallery of past generations
+
 Image-to-Image or Inpainting support
+
 More detailed safety filtering
+
 Prompt templates built into the UI
+
+
 
 

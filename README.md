@@ -20,14 +20,14 @@ The project focuses on clarity, modularity, and realistic output quality.
 
 🧱 2. Project Architecture
 
-'''bash
+```bash
 ai-image-generator/
 ├── app.py                 # User interface built with Streamlit
 ├── generator.py           # Core model logic for text→image
 ├── utils.py               # Helper functions (watermark, saving, filtering)
 ├── requirements.txt       # Dependencies
 └── outputs/               # Auto-created folders storing images + metadata
-'''
+```
 
 Flow of the application:
 

@@ -38,3 +38,140 @@ Images are watermarked and saved
 Results are shown in the UI, with download options
 
 
+3. Setup & Installation
+   
+✔️ Step 1: Clone the repository
+```bash
+git clone https://github.com/<your-username>/ai-image-generator.git
+cd ai-image-generator
+```
+
+✔️ Step 2: Install dependencies
+```bash
+pip install -r requirements.txt
+```
+
+✔️ Step 3: (Optional) Login to Hugging Face
+
+If the Stable Diffusion model requires license acceptance:
+```bash
+pip install huggingface_hub
+huggingface-cli login
+```
+
+✔️ Step 4: Run the application
+```bash
+streamlit run app.py
+```
+
+Then open the link shown in the terminal (usually):
+```bash
+http://localhost:8501/
+```
+
+🖥️ 4. Hardware Requirements
+🔹 GPU (Recommended)
+
+For smooth, fast image generation:
+
+NVIDIA GPU with 8GB VRAM or more
+CUDA 11.8 / 12.x installed
+Install CUDA-enabled PyTorch:
+```bash
+pip install torch torchvision torchaudio --index-url https://download.pytorch.org/whl/cu121
+```
+
+🔹 CPU
+
+The system also functions fully on the CPU.
+However, image generation will be slower:
+~20–40 seconds per image depending on settings
+
+5. How to Use the App
+
+Enter a text description in the prompt box
+
+Select:
+
+Number of images
+Style (photorealistic, artistic, cartoon)
+Steps
+Guidance scale
+Negative prompt
+Seed
+
+Click Generate
+
+Images appear on the page
+
+Download the PNG / JPEG files
+
+Check metadata inside the expandable section
+Prompt is enriched with style + quality tags
+Stable Diffusion generates 1–4 images
+Images are watermarked and saved
+Results are shown in the UI, with download options
+
+
+6. Technology Stack & Model Details
+Technologies Used
+
+Python
+Streamlit
+PyTorch
+HuggingFace Diffusers
+Pillow
+Accelerate
+
+Model Used
+```
+runwayml/stable-diffusion-v1-5
+```
+
+This is a widely used open-source latent diffusion model trained for general-purpose image generation.
+
+✍️ 7. Prompt Engineering Tips
+
+These tips were applied in the generator to improve image quality:
+
+Add quality terms like:
+```
+highly detailed, sharp focus, dramatic lighting, 4k resolution
+```
+
+Add style-specific hints:
+```
+photorealistic, digital painting, cartoon style
+```
+
+Use context to anchor the scene
+Always include a negative prompt, such as:
+```
+blurry, distorted, low quality, extra limbs, text, watermark
+```
+
+The guidance scale of 6–8 works best
+
+Steps between 40–50 usually produce high-quality images
+
+⚠️ 8. Current Limitations
+
+Slower generation on the CPU
+Base model outputs are limited to 512×512 resolution
+Occasional imperfections depending on the prompt
+Only simple prompt filtering (word-based)
+Model not fine-tuned on any specific dataset
+Needs at least 6–8 GB RAM to run comfortably
+
+🚀 9. Future Improvements
+
+If extended further, the project can include:
+
+Fine-tuning or LoRA training for custom styles
+Upgrading to higher-resolution models (e.g., SDXL)
+A persistent gallery of past generations
+Image-to-Image or Inpainting support
+More detailed safety filtering
+Prompt templates built into the UI
+
+
